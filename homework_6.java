@@ -26,7 +26,8 @@ public class homework_6 {
 
         System.out.println("Проверка ту стринг");
         laptop_1.toString();
-
+        String yes = "yes";
+        String no = "no";
 
         switch(input){
             case("1"):
@@ -44,7 +45,7 @@ public class homework_6 {
             int input_2 = Integer.parseInt(scanner.nextLine());
             System.out.println("\nЕсли вы хотите больше или равной этому значению, то напишите да\nЕсли хотите меньше, то напишите нет");
             String input_2_1 = scanner.nextLine();
-            if(input_2_1=="да"){
+            if(input_2_1.equals(yes)){
                 for (Laptop somethingLaptop : set) {
                     if(somethingLaptop.filter_ram_more(input_2)){
 
@@ -52,7 +53,7 @@ public class homework_6 {
                     }
                 }
             }
-            else if(input_2_1=="нет"){
+            else if(input_2_1.equals(no)){
                 for (Laptop somethingLaptop : set) {
                 if(somethingLaptop.filter_ram_less(input_2)){
 
@@ -65,9 +66,9 @@ public class homework_6 {
             case("3"):
             System.out.println("\nВведите размер жесткого диска ноутбука");
             String input_3 = scanner.nextLine();
-            System.out.println("\nЕсли вы хотите больше или равной этому значению, то напишите да\nЕсли хотите меньше, то напишите нет");
+            System.out.println("\nЕсли вы хотите больше или равной этому значению, то напишите yes\nЕсли хотите меньше, то напишите no");
             String input_3_1 = scanner.nextLine();
-            if(input_3_1=="да"){
+            if(input_3_1.equals("yes")){
                 for (Laptop somethingLaptop : set) {
                     if(somethingLaptop.filter_hard_drive_more(input_3)){
 
@@ -76,7 +77,7 @@ public class homework_6 {
 
                 }
             }
-            else if(input_3_1=="нет"){
+            else if(input_3_1.equals("no")){
                 for (Laptop somethingLaptop : set) {
                      if(somethingLaptop.filter_hard_drive_less(input_3)){
 
@@ -109,9 +110,9 @@ public class homework_6 {
             case("6"):
             System.out.println("\nВведите цену ноутбука");
             String input_6 = scanner.nextLine();
-            System.out.println("\nЕсли вы хотите больше или равной этому значению, то напишите да\nЕсли хотите меньше, то напишите нет");
+            System.out.println("\nЕсли вы хотите больше или равной этому значению, то напишите yes\nЕсли хотите меньше, то напишите no");
             String input_6_1 = scanner.nextLine();
-            if(input_6_1=="да"){
+            if(input_6_1.equals("yes")){
                 for (Laptop somethingLaptop : set) {
                 if(somethingLaptop.filter_price_more(input_6)){
 
@@ -121,7 +122,7 @@ public class homework_6 {
             }
 
             }
-            else if(input_6_1=="нет"){
+            else if(input_6_1.equals("no")){
                 for (Laptop somethingLaptop : set) {
                 if(somethingLaptop.filter_price_less(input_6)){
 
